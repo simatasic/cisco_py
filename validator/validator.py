@@ -15,14 +15,11 @@ def verify(iban):
     else:
         final = ""
         iban = iban[4:] + iban[0:4]
-        print(iban)
         for ch in iban:
             if ch.isalpha():
                 ch = ch.upper()
                 ch = lettonum(ch)
             final = final + str(ch)
-
-        print(int(final) % 97)
         if int(final) % 97 == 1:
             return True
         else:
