@@ -28,7 +28,6 @@ def verify(iban):
 
 def lettonum(ch):
     n = ord(f"{ch}") - 55
-    print(ord("A"))
     return n
 
 
